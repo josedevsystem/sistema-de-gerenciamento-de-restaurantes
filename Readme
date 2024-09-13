@@ -1,0 +1,80 @@
+Introdução
+Este projeto é um sistema de gerenciamento de restaurante desenvolvido utilizando SQL. O sistema permite o gerenciamento eficiente de clientes, mesas e pedidos, facilitando a administração das operações do restaurante. O banco de dados foi projetado para suportar as seguintes funcionalidades:
+
+# Sistema de Gerenciamento de Restaurante
+
+Este projeto configura um banco de dados para gerenciar operações de um restaurante, utilizando SQL. O banco de dados suporta o gerenciamento de clientes, mesas e pedidos, e oferece funcionalidades para consultar, atualizar e excluir dados.
+
+## Estrutura do Banco de Dados
+
+1. **Clientes**
+   - `id_cliente`: Identificador único do cliente (chave primária).
+   - `nome`: Nome do cliente.
+   - `telefone`: Número de telefone do cliente.
+   - `email`: Endereço de e-mail do cliente.
+
+2. **Mesas**
+   - `id_mesa`: Identificador único da mesa (chave primária).
+   - `numero_mesa`: Número da mesa.
+   - `capacidade`: Número máximo de pessoas que a mesa pode acomodar.
+
+3. **Pedidos**
+   - `id_pedido`: Identificador único do pedido (chave primária).
+   - `id_cliente`: Referência ao cliente que fez o pedido (chave estrangeira).
+   - `id_mesa`: Referência à mesa onde o pedido foi feito (chave estrangeira).
+   - `data_pedido`: Data e hora em que o pedido foi realizado.
+   - `total`: Valor total do pedido.
+
+4. **Itens_Pedido**
+   - `id_item`: Identificador único do item (chave primária).
+   - `id_pedido`: Referência ao pedido ao qual o item pertence (chave estrangeira).
+   - `descricao_item`: Descrição do item do pedido.
+   - `quantidade`: Quantidade do item pedido.
+   - `preco_unitario`: Preço unitário do item.
+
+## Comandos SQL Utilizados
+
+1. **Criar Banco de Dados e Tabelas**
+   - `CREATE DATABASE RestauranteDB;`
+   - `CREATE TABLE Clientes (...);`
+   - `CREATE TABLE Mesas (...);`
+   - `CREATE TABLE Pedidos (...);`
+   - `CREATE TABLE Itens_Pedido (...);`
+
+2. **Inserir Dados**
+   - `INSERT INTO Clientes (nome, telefone, email) VALUES (...);`
+   - `INSERT INTO Mesas (numero_mesa, capacidade) VALUES (...);`
+   - `INSERT INTO Pedidos (id_cliente, id_mesa, data_pedido, total) VALUES (...);`
+   - `INSERT INTO Itens_Pedido (id_pedido, descricao_item, quantidade, preco_unitario) VALUES (...);`
+
+3. **Consultar Dados**
+   - Listar todos os clientes, mesas e pedidos.
+   - Mostrar itens de um pedido específico e calcular o total.
+
+4. **Atualizar Dados**
+   - Atualizar informações de clientes e mesas.
+
+5. **Excluir Dados**
+   - Excluir pedidos e itens relacionados.
+
+## Como Usar
+
+1. **Crie o Banco de Dados**:
+   - Execute o comando `CREATE DATABASE RestauranteDB;` para criar o banco de dados.
+
+2. **Crie as Tabelas**:
+   - Execute os comandos `CREATE TABLE` para criar as tabelas necessárias.
+
+3. **Insira Dados**:
+   - Execute os comandos `INSERT INTO` para adicionar dados fictícios.
+
+4. **Consultas e Manutenção**:
+   - Use as consultas fornecidas para listar, atualizar e excluir dados conforme necessário.
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias ou correções para este projeto. Envie um pull request ou abra uma issue para discutir suas alterações.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
