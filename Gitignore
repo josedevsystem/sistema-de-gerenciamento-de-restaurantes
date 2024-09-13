@@ -1,0 +1,20 @@
+# Ignore arquivos temporários do sistema
+*.log
+*.tmp
+*.swp
+
+# Ignore arquivos específicos de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Ignore arquivos gerados por ferramentas de construção
+*.sql
+*.db
+
+# Ignore arquivos de configuração locais
+*.env
+
+# Ignore arquivos de backup
+*.bak
+*.orig
